@@ -28,5 +28,7 @@ public class CreateContactTest extends BaseClass {
 		ccp.createContact(driver, fUtil.readDataFromExcelFile("Sheet1", 4, 2), fUtil.readDataFromExcelFile("Sheet1", 4, 3), fUtil.readDataFromExcelFile("Sheet1", 4, 3), fUtil.readDataFromExcelFile("Sheet1", 4, 4), fUtil.readDataFromExcelFile("Sheet1", 4, 5), fUtil.readDataFromExcelFile("Sheet1", 4, 6));
 		
 		driver.findElement(By.xpath("//button[@aria-label=\"close\"]")).click();
+		
+		System.out.println("github changes");
 	}
 }
