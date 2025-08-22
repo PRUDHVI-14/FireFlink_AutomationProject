@@ -1,6 +1,7 @@
 package ninjaCRM.genericUtilities;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 //import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import ninjaCRMOnjectRepository.DashboardPage;
 import ninjaCRMOnjectRepository.LoginPage;
 
-public class BaseClass {
+public class BaseClass extends DataBaseConnectivity{
 	
 	public FileUtility fUtil = new FileUtility();
 	public JavaUtilities jUtil = new JavaUtilities();
@@ -32,8 +33,10 @@ public class BaseClass {
 	
 //	WebDriverManager.firefoxdriver().setup();
 	@BeforeSuite(alwaysRun = true)
+	
 	public void bsConfig() {
-		System.out.println("=====database is connection===");
+//		System.out.println("=====database is connection===");
+		getConnectionToDataBase();
 	}
 	
 //	@Parameters("browser")//for cross browser execution
@@ -82,8 +85,9 @@ public class BaseClass {
 		System.out.println("closed the browser");
 	}
 	@AfterSuite(alwaysRun = true)
-	public void asConfig() {
-		System.out.println("====database connection removed====");
+	public void asConfig() throws SQLException {
+//		System.out.println("====database connection removed====");
+		closeConnectionToDataBase();
 	}
 	
 }
