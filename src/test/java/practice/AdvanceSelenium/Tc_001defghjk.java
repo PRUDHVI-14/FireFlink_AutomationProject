@@ -17,7 +17,7 @@ public class Tc_001defghjk {
 	public void sample2() {
 		
 		
-		
+		System.out.println("nnhjjk");
 		
 	}
 }
