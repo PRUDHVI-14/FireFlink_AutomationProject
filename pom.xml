@@ -114,7 +114,7 @@
 				        <version>3.5.3</version>
 				        <configuration>
 				          <suiteXmlFiles>
-				            <suiteXmlFile>smokeSuite</suiteXmlFile>
+				            <suiteXmlFile>smokeSuite.xml</suiteXmlFile>
 				          </suiteXmlFiles>
 				        </configuration>
 				      </plugin>
